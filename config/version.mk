@@ -15,8 +15,8 @@ include vendor/gapps/config.mk
 endif
 ifeq ($(ROM_BUILDTYPE),MICROG)
 include vendor/microg/microg.mk
-    VENDOR_EXCEPTION_PATHS += \
-    microg
+    VENDOR_EXCEPTION_PATHS += microg
+    VENDOR_EXCEPTION_PATHS += chang
 endif
 ifeq ($(ROM_BUILDTIME_UTC),y)
     ROM_VERSION := $(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
